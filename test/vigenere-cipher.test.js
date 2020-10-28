@@ -56,6 +56,7 @@ describe('Vigenere cipher', () => {
         });
         
         it.optional('base encryption', () => {
+            assert.equal(directMachine.encrypt('ATTACKATDAWN!', 'lemon'), 'LXFOPVEFRNHR!');
             assert.equal(directMachine.encrypt('attack at dawn!', 'alphonse'), 'AEIHQX SX DLLU!');
             assert.equal(directMachine.encrypt('Example of sequence: 1, 2, 3, 4.', 'lilkey'), 'PFLWTJP WQ CIOFMYMI: 1, 2, 3, 4.');
             assert.equal(directMachine.encrypt('cryptography', 'verylongkeyword'), 'XVPNECTXKTFU');
